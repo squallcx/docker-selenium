@@ -8,11 +8,9 @@ RUN			apt-get -y install libxml2-dev libxslt-dev zlib1g-dev libffi-dev
 
 RUN			apt-get -y install libxss1 libappindicator1 libindicator7
 
-RUN			apt-get -y install wget
-RUN			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN			apt-get -y install wget chromium-browser
 
 RUN			apt-get -y install libnss3-dev libgconf2-4 libasound2 libpango1.0-0 fonts-liberation libcurl3 xdg-utils
-RUN			dpkg -i google-chrome*.deb
 
 RUN			apt-get -y install xvfb
 
