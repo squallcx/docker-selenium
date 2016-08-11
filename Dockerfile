@@ -19,7 +19,6 @@ RUN apt-get update -y && \
     cd /root && git clone https://github.com/kanaka/noVNC.git && \
     cd noVNC/utils && git clone https://github.com/kanaka/websockify websockify && \
     cd /root && \
-    chmod 0755 /startup.sh && \
     apt-get autoclean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
