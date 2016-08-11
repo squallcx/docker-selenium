@@ -26,17 +26,3 @@ RUN			ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 RUN			ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
 RUN			pip3 install --upgrade pip
-
-ENV DIR=sources
-ENV XUSER=xamance
-
-ADD $DIR /$DIR
-WORKDIR /$DIR
-
-RUN pip3 install --trusted-host 10.42.120.124 --extra-index-url http://10.42.120.124:8080/simple/ ctools
-RUN pip3 install lxml cssselect weasyprint
-RUN pip3 install -r requirements.txt
-
-RUN useradd -s /bin/bash $XUSER
-RUN chown $XUSER:nogroup /$DIR -R
-
