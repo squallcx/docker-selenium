@@ -14,9 +14,6 @@ RUN			mv -f chromedriver /usr/local/share/chromedriver
 RUN			ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 RUN			ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
-Run     mkdir ~/.vnc
-run     x11vnc -storepasswd 1234 ~/.vnc/passwd
-
 RUN apt-get update -y && \
     apt-get install -y git python python-numpy unzip openbox geany menu && \
     cd /root && git clone https://github.com/kanaka/noVNC.git && \
